@@ -1,4 +1,4 @@
-!apt-get -y install fonts-ipafont-gothic
+#apt-get -y install fonts-ipafont-gothic
 
 import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
@@ -24,7 +24,7 @@ def str2img(input_str, yoko_mojisuu, tate_mojisuu, moji_size):
 
   return img
 
-img = str2img("小森教授", 2, 3, 50)
+img = str2img("文字配置", 2, 3, 50)
 
 def img2graylist(input_img):
   img_width, img_height = input_img.size
@@ -64,7 +64,7 @@ def print2Dcharlist(charlist):
     print()
 
 # 0/1表記は漢字が潰れる
-img = str2img("小森教授", 6, 1, 10)
+img = str2img("書きたい文字", 6, 1, 10)
 graylist = img2graylist(img)
 wblist = graylist2wblist(graylist)
 
@@ -89,9 +89,9 @@ def wblist2wbcharlist(input_wblist, nakami_str, soto_str):
   return result_wbcharlist
 
 # 表示する文字
-img = str2img("我男好", 15, 1, 30)
+img = str2img("書きたい文字", 15, 1, 30)
 graylist = img2graylist(img)
 wblist = graylist2wblist(graylist)
 # 上記の文字を表示する文字
-wbcharlist = wblist2wbcharlist(wblist, "松田隼斗","　")
+wbcharlist = wblist2wbcharlist(wblist, "構成する文字","　")
 print2Dcharlist(wbcharlist)
