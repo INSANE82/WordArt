@@ -88,10 +88,10 @@ def wblist2wbcharlist(input_wblist, nakami_str, soto_str):
 
   return result_wbcharlist
 
-# 表示する文字
+# 表示する文字(diplay word)
 img = str2img("書きたい文字", 15, 1, 30)
 graylist = img2graylist(img)
 wblist = graylist2wblist(graylist)
-# 上記の文字を表示する文字
+# 上記の文字を表示する文字(making up display word)
 wbcharlist = wblist2wbcharlist(wblist, "構成する文字","　")
 print2Dcharlist(wbcharlist)
